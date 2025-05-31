@@ -1,0 +1,13 @@
+{
+  "name": "highlevel-oauth-server",
+  "version": "1.0.0",
+  "description": "Server to handle HighLevel OAuth token exchange",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "axios": "^1.6.8"
+  }
+}
