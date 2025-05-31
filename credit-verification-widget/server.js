@@ -21,21 +21,16 @@ app.get('/oauth/callback', async (req, res) => {
   try {
     // Exchange the authorization code for an access token
     const response = await axios.post('https://backend.leadconnectorhq.com/oauth/token', {
-      const clientId = process.env.CLIENT_ID;
-const clientSecret = process.env.CLIENT_SECRET;
-
-try {
-  const response = await axios.post('https://backend.leadconnectorhq.com/oauth/token', {
-    client_id: clientId,
-    client_secret: clientSecret,
-    code: code,
-    grant_type: 'authorization_code',
-    redirect_uri: 'https://your-render-server.onrender.com/oauth/callback' // Replace with your Render URL
-  }, {
-    headers: {
-      'Content-Type': 'application/x-www-form-urlencoded'
-    }
-  });
+      client_id: 'YOUR_CLIENT_ID', // placeholder - Replace with '6835b1cc2f5f6181968df6d6-mbbf0w40'
+      client_secret: 'YOUR_CLIENT_SECRET', // placeholder - Replace with '49813065-8625-4e41-99ab-2d7503246b78'
+      code: code,
+      grant_type: 'authorization_code',
+      redirect_uri: 'https://your-render-server.onrender.com/oauth/callback' // placeholder - Replace with your Render server URL
+    }, {
+      headers: {
+        'Content-Type': 'application/x-www-form-urlencoded'
+      }
+    });
 
     const { access_token, refresh_token, expires_in } = response.data;
 
