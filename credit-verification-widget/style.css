@@ -1,0 +1,101 @@
+.myWidget-container {
+  background: #fff;
+  padding: 24px;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  max-width: 90%;
+  margin: 0 auto;
+  font-family: Arial, sans-serif;
+}
+
+.myWidget-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.myWidget-form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 16px;
+}
+
+.myWidget-field {
+  display: flex;
+  flex-direction: column;
+}
+
+.myWidget-field label {
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+.myWidget-field input {
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.myWidget-btn {
+  background: #333;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  align-self: flex-start;
+}
+
+.myWidget-btn:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+.myWidget-iframe-wrapper {
+  margin-top: 20px;
+  width: 100%;
+}
+
+.myWidget-loading {
+  text-align: center;
+  color: #666;
+}
+
+.myWidget-error {
+  color: #dc3545;
+  text-align: center;
+}
+
+.myWidget-success {
+  color: #28a745;
+  text-align: center;
+}
+
+.myWidget-message {
+  color: #666;
+  text-align: center;
+}
+
+.myWidget-countdown {
+  color: #333;
+  text-align: center;
+}
+
+.myWidget-status {
+  display: none;
+}
+
+.myWidget-status.hidden {
+  display: none;
+}
+
+.myWidget-status:not(.hidden) {
+  display: block;
+  margin: 10px;
+}
+
+@media screen and (max-width: 767px), .--mobile {
+  .myWidget-form-row {
+    grid-template-columns: 1fr;
+  }
+}
